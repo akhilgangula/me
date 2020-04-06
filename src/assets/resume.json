@@ -1,0 +1,55 @@
+[
+    {
+        "Company": "Lowe's",
+        "type": "work",
+        "Designation": "Software Engineering",
+        "Location": "Bangalore, India",
+        "StartDate": "Jan-2020",
+        "EndDate": "till date",
+        "Description": "Lowe's is a Home Improvement giant, in this role I handle cart and checkout pages of its ecommerce site."
+    },
+    {
+        "Company": "Factset Research Systems",
+        "type": "work",
+        "Designation": "Software Engineering",
+        "Location": "Hyderbad, India",
+        "StartDate": "May-2017",
+        "EndDate": "Jan-2020",
+        "Description": "Portware a sister company of Factset research systems, is a Execution Managment System which is used in Trading, my responsibilties in this role is develop and support Foregin eXchange (FX) requirements"
+    },
+    {
+        "Company": "Portware India Pvt Ltd",
+        "type": "work",
+        "Designation": "Intern",
+        "Location": "Hyderbad, India",
+        "StartDate": "Jan-2017",
+        "EndDate": "Apr-2017",
+        "Description": "Recurited as an Intern while in my bachelors, I had an opportunity to learn the trading flow and concept of automation"
+    },
+    {
+        "Company": "GITAM",
+        "type": "study",
+        "Designation": "8.62 CGPA",
+        "Location": "Hyderbad, India",
+        "StartDate": "Jun-2013",
+        "EndDate": "Apr-2017",
+        "Description": "Completed my Bachelor's of Computer Science Engineering."
+    },
+    {
+        "Company": "NRI Academy",
+        "type": "study",
+        "Designation": "89.1%",
+        "Location": "Hyderbad, India",
+        "StartDate": "Jun-2011",
+        "EndDate": "Apr-2013",
+        "Description": ""
+    },{
+        "Company": "Sanghamitra School",
+        "type": "study",
+        "Designation": "9.6 CGPA",
+        "Location": "Hyderbad, India",
+        "EndDate": "Apr-2011",
+        "Description": ""
+    }
+
+]

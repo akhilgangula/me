@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Portfolio for RA",
+        "description": "Built in React JS, this is a protfolio for RA-Engineers an Hyderabad based company which deals with imports of mineral to India."
+
+    },
+    {
+        "name": "Order Management System",
+        "description": "A dashboard integrated by ecommerce site built in React JS, which will be help to request, quote and order for an mineral"
+    }
+
+]
