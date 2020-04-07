@@ -13,7 +13,8 @@
             <span @click="switchTheme" class="theme-toggler" title="switch theme">Namaste</span>
             <span class="comma">,</span>
             <br class="break-mobile" />
-            <router-link to="/aboutMe" class="navigator" title="Who am I?">I am</router-link>
+            <router-link to="/aboutMe" class="navigator" title="Who am I?"> I am 
+            </router-link>
             <br class="break-desktop" />
             <router-link to="/skillSet" class="navigator" title="Skillset">Akhil Gangula</router-link>
           </div>
@@ -98,7 +99,7 @@ export default {
   font-size: 22px;
 }
 .landing-download {
-  position: absolute;
+  position: fixed;
   top: 50px;
   right: 120px;
 }
@@ -114,7 +115,7 @@ export default {
 .landing-footer {
   margin-left: 120px;
   bottom: 50px;
-  position: absolute;
+  position: fixed;
 }
 .landing-heading {
   margin-left: 120px;
@@ -122,19 +123,19 @@ export default {
   color: var(--font-color);
 }
 .landing-caption {
-  top: 5em;
+  top: 5%;
   position: relative;
   color: var(--font-color);
 }
 .landing-title {
   margin-left: 120px;
-  position: relative;
-  top: 20%;
+  position: absolute;
+  bottom: 30%;
 }
 .title {
   font: "Fira Sans", serif;
   font-size: 150px;
-  line-height: 0.7;
+  line-height: 1em;
   letter-spacing: 0;
   color: var(--font-color);
 }
@@ -168,18 +169,22 @@ export default {
   text-decoration: none;
   color: inherit;
 }
-/** Ipad and tablets */
-@media (min-width: 481px) and (max-width: 1024px) {
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
   .landing-title {
     margin-left: 100px;
-    position: relative;
     top: 20%;
   }
   .comma {
     display: none;
   }
   .break-desktop {
-    display: none;
+    display: block;
   }
   .break-mobile {
     display: block;
@@ -194,25 +199,52 @@ export default {
   }
 }
 
-/** Mobile */
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .break-desktop {
+    display: block;
+  }
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .break-desktop {
+    display: block;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
 @media (min-width: 320px) and (max-width: 480px) {
+  
   .landing-heading {
     margin-left: 30px;
     margin-top: 60px;
   }
   .landing-download {
-    position: absolute;
     margin-top: 60px;
     top: 0;
     right: 20px;
   }
   .landing-title {
     margin-left: 30px;
-    position: relative;
     top: 20%;
   }
   .title {
-    font-size: 70px;
+    margin-top: 15%;
+    font-size: 50px;
     line-height: 1.2;
   }
   .comma {
@@ -235,7 +267,7 @@ export default {
   .landing-footer {
     margin-left: 20px;
     bottom: 30px;
-    position: absolute;
+    position: fixed;
   }
 }
 </style>

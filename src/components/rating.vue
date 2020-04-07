@@ -1,9 +1,6 @@
 <template>
   <div class="root">
     <div>
-      <!--span class="skill">
-        <i class="fab fa-html5 fa-3x"></i><span class="skill-desc">HTML</span>
-      </span-->
       <span v-for="star in score_slot" :key="star" class="fas fa-dot-circle checked"></span>
       <span v-for="star in unscored_slot" :key="star" class="fas fa-dot-circle "></span>
     </div>
@@ -24,9 +21,6 @@ export default {
 <style scoped>
 .fas {
   padding: 3px;
-
-}
-.root {
 
 }
 .checked {
