@@ -190,12 +190,28 @@ export default {
     display: block;
   }
   .title {
-    font-size: 100px;
+    font-size: 130px;
     line-height: 1.2;
   }
   .landing-caption {
     top: 1em;
-    font-size: 12px;
+    font-size: 30px;
+  }
+
+  .icons li{
+    font-size: 30px;
+  }
+
+  .landing-footer {
+    margin-bottom: 5%;
+  }
+
+  .landing-heading {
+    font-size: 30px;
+  }
+
+  .landing-download {
+    font-size: 30px;
   }
 }
 
@@ -208,7 +224,7 @@ export default {
   .break-desktop {
     display: block;
   }
-  
+ 
 }
 
 /* 
@@ -220,6 +236,8 @@ export default {
   .break-desktop {
     display: block;
   }
+
+  
 }
 
 /* 
