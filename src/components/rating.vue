@@ -2,7 +2,7 @@
   <div class="root">
     <div>
       <span v-for="star in score_slot" :key="star" class="fas fa-dot-circle checked"></span>
-      <span v-for="star in unscored_slot" :key="star" class="fas fa-dot-circle "></span>
+      <span v-for="star in unscored_slot" :key="star" class="fas fa-dot-circle"></span>
     </div>
   </div>
 </template>
@@ -15,13 +15,16 @@ export default {
       score_slot: [1, 2, 3, 4, 5].splice(0, this.rating),
       unscored_slot: [1, 2, 3, 4, 5].splice(this.rating, 5)
     };
+  },
+  mounted: function() {
+    console.log(this.rating);
+    
   }
 };
 </script>
 <style scoped>
 .fas {
   padding: 3px;
-
 }
 .checked {
   color: var(--font-color);

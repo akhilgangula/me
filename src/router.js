@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from '@/pages/landingPage.vue';
+import Home from '@/pages/home/landingPage.vue';
 import Career from '@/pages/career.vue';
 import AboutMe from '@/pages/aboutMe.vue';
 import SkillSet from '@/pages/skillset.vue';
@@ -23,7 +23,7 @@ export default new Router ({
             }
         },
         {
-            path: '/aboutMe',
+            path: '/iam',
             name: 'about me',
             components: {
                 default: AboutMe, 

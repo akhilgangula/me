@@ -1,16 +1,16 @@
 <template>
   <div>
     <layout>
-      <div class="wrapper">
-        <router-link to="/" class="navigator" title="Home page">
-          <div class="back">
+      <div class="wrapper ">
+        <div class="back is-size-5 is-size-4-desktop is-size-3-widescreen">
+          <router-link to="/" title="Home page">
             <i class="fas fa-angle-double-left fa"></i>
-            <span class="home-btn">  Home</span>
-          </div>
-        </router-link>
+            <span class="home-btn"> Home</span>
+          </router-link>
+        </div>
         <div class="abt-me-wrapper">
-          <h1 class="abt-me-heading has-text-centered has-text-left-desktop is-size-1">Who Am I?</h1>
-          <div class="abt-me-body">
+          <h1 class="abt-me-heading has-text-centered has-text-left-desktop ">Who Am I?</h1>
+          <div class="abt-me-body is-size-5-desktop">
             <p>
               <i class="fas fa-angle-right"></i> A 25 years old Indian guy from Hyderabad, India.
               <br />
@@ -22,13 +22,21 @@
               <br />
             </p>
           </div>
-          <div class="launchpad">
-            <h3 class="center">My Launchpad</h3>
-            <div class="root-launch">
-              <launch-pad :theme="this.theme"></launch-pad>
+          <div class="btn-launchPad">
+            <div class="columns is-hidden-tablet has-text-centered launchpad">
+              <router-link to="/launchpad">
+                <div class="column"></div>
+                <div class="column is-size-5">
+                  <i class="fas fa-rocket fa-2x icon"></i>
+                  <span class="launchpad-title">Launch Pad</span>
+                </div>
+              </router-link>
             </div>
           </div>
-          <div class="question-mark" @click="switchTheme">?</div>
+          <div class="launchPad-carousel">
+            <launch-pad :theme="this.theme"></launch-pad>
+          </div>
+          <div class="question-mark is-hidden-mobile" @click="switchTheme">?</div>
         </div>
       </div>
     </layout>
@@ -62,130 +70,130 @@ export default {
 };
 </script>
 <style scoped>
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
-.abt-me-heading {
+a {
   color: var(--font-color);
 }
-.borders {
-  border: 1px solid black;
-}
-.center {
-  text-align: center;
-}
-.abt-me-body {
-  margin-top: 2%;
-  margin-left: 10%;
-  font-size: 24px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: var(--font-color);
-}
+
 .wrapper {
-  width: 100%;
-  height: 100%;
-}
-.back {
-  margin-top: 30px;
-  margin-left: 30px;
-  margin-right: 20px;
-  font-size: 20px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-.navigator {
-  text-decoration: none;
-  color: inherit;
   color: var(--font-color);
 }
-.abt-me-wrapper {
-  margin-left: 10%;
-  margin-top: 5%;
-  margin-right: 10%;
-  line-height: 2.2em;
-}
-.launchpad {
-  margin-top: 7%;
-  width: 75%;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: var(--font-color);
-}
-.root-launch {
-  background-color: var(--secondary-color);
-}
-
-.question-mark {
-  position: fixed;
-  right: 10%;
-  top: 40%;
-  font-size: 500px;
-  cursor: pointer;
-  color: var(--secondary-color);
-
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 3s;
-}
-
-@keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
+@media (min-width: 1281px) {
+  .wrapper {
+    margin: 50px;
   }
-  100% {
-    opacity: 1;
+
+  .abt-me-heading {
+    font-size: 80px;
   }
-}
-/** Ipad and tablets */
-@media (min-width: 481px) and (max-width: 1024px) {
-  .launchpad {
-    margin-top: 10%;
-    margin-left: 10%;
-    font-size: 30px;
-  }
+
   .abt-me-wrapper {
-    margin-top: 10%;
-    margin-right: 5%;
-    line-height: 2.2em;
-  }
-  .abt-me-body {
-    margin-top: 5%;
-    font-size: 25px;
-  }
-
-  .back {
-    font-size: 30px;
+    margin:50px;
   }
 
   .question-mark {
+    font-size: 500px;
+    position: absolute;
+    right: 50px;
+    top:50px;
+    line-height: 1;
+  }
+
+  .abt-me-body {
+    line-height: 2;
+  }
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+  .wrapper {
+    margin: 50px;
+  }
+
+  .abt-me-heading {
+    font-size: 80px;
+  }
+
+  .abt-me-wrapper {
+    margin:50px;
+  }
+}
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+/** Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .btn-launchPad {
+    display: none;
+  }
+
+  .wrapper {
+    margin: 50px;
+  }
+
+  .abt-me-body {
+    font-size: 1.2rem;
+    padding: 1rem;
+    line-height: 2rem;
+  }
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+/** Nexus 7 tablet */
+@media (min-width: 481px) and (max-width: 767px) {
+  .btn-launchPad {
     display: none;
   }
 }
 
-/** Mobile */
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
 @media (min-width: 320px) and (max-width: 480px) {
-  .abt-me-body {
-    margin-left: 5%;
-    font-size: 16px;
+  .wrapper {
+    margin: 15px;
   }
-  .back {
-    font-size: 16px;
-  }
-  .abt-me-wrapper {
-    margin-left: 5%;
-    margin-right: 5%;
-    line-height: 1.6em;
-    margin-top: 6%;
-  }
-
   .launchpad {
-    width: 100%;
-    margin-top: 5%;
-    margin-bottom: 30px;
+    bottom: 10px;
+    position: relative;
+  }
+  .fas {
+    padding: 5px;
+  }
+  .icon {
+    padding-right: 25px;
+    text-align: center;
   }
 
-  .question-mark {
-    display: none;
+  .btn-launchPad {
+    position: absolute;
+    bottom: 10px;
+
+    width: 100%;
+    left: 10px;
   }
-  .abt-me-body {
-    margin-top: 5%;
+  .launchPad-carousel {
+    display: none;
   }
 }
 </style>

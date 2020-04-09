@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-   <fade-transition :duration="300" :delay="600">
+   <fade-transition :duration="600" :delay="100">
       <router-view></router-view>
    </fade-transition>
   </div>

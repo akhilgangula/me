@@ -2,7 +2,7 @@
   <div>
     <layout>
       <div class="wrapper">
-        <div class="back">
+        <div class="back is-size-5">
           <router-link to="/" class="navigator" title="Home page">
             <i class="fas fa-angle-double-left fa"></i>
             <span class="home-btn">  Home</span>
@@ -48,4 +48,7 @@ export default {
   color: inherit;
   color: var(--font-color);
 }
+
+
+
 </style>

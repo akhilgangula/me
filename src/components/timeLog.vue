@@ -2,24 +2,32 @@
   <div class="timeline-block" :class="side">
     <div class="marker"></div>
     <div class="timeline-content">
-      <div>
-      <div class="date">{{date}}</div>
-      <div>
-        <span class="org">{{org}}</span> @
-        <span class="location">{{location}}</span>
+      <div class="date is-size-4 is-size-3-tablet">{{date}}</div>
+      <div class="loc-org has-text-weight-semibold">
+        <span class="org is-size-5 is-size-4-tablet">{{org}}</span> @
+        <span class="location is-size-5 is-size-4-tablet">{{location}}</span>
       </div>
-      <div>
-        <span v-if="type==='work'">as </span>
-        <span class="designation">{{designation}}</span>
+      <div class="is-size-6">
+        <span v-if="type==='work'">as</span>
+        <span
+          class="designation has-text-weight-semibold is-size-6 is-size-5-tablet"
+        >{{designation}}</span>
       </div>
-      <div class="description">{{description}}</div>
-      </div>
+      <div class="description is-size-6 is-size-4-tablet">{{description}}</div>
     </div>
   </div>
 </template>
 <script>
 export default {
-  props: ["side", "date", "org", "description", "location", "designation","type"]
+  props: [
+    "side",
+    "date",
+    "org",
+    "description",
+    "location",
+    "designation",
+    "type"
+  ]
 };
 </script>
 
@@ -28,9 +36,7 @@ h1 span {
   font-weight: 600;
 }
 .wrapper:hover {
-
   color: var(--font-color);
-
 }
 .timeline-block {
   width: -webkit-calc(50% + 8px);
@@ -46,12 +52,7 @@ h1 span {
   justify-content: space-between;
   clear: both;
 }
-.location {
-  font-size: 25px;
-}
-.designation {
-  font-size: 20px;
-}
+
 .timeline-block-right {
   float: right;
 }
@@ -81,18 +82,15 @@ h1 span {
 .timeline-content .date {
   margin-top: 5px;
   margin-bottom: 5px;
-  font-size: 35px;
 
   font-weight: bolder;
 }
 
 .timeline-content span {
-  font-size: 20px;
   color: #a4a4a4;
 }
 
 .timeline-content p {
-  font-size: 18px;
   line-height: 1.5em;
   word-spacing: 1px;
   color: #888;
@@ -112,6 +110,27 @@ h1 span {
 }
 .timeline-block .description:hover {
   color: var(--font-color);
+}
+
+.description {
+  line-height: 1.5em;
+  color: var(--font-color);
+}
+.date {
+  color: var(--font-color);
+}
+.loc-org {
+  line-height: 1.2em;
+}
+/** Tablet and Ipad */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .description {
+    font-size: 2.5rem;
+  }
+  
+  .loc-org {
+    line-height: 2rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
