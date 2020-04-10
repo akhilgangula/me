@@ -151,15 +151,7 @@ a:hover {
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
-  .landing-title {
-    font-size: 130px;
-    width: 70%;
-    line-height: 1em;
-  }
-
-  .column {
-    margin-left: 30px;
-  }
+  
 }
 
 /* 
@@ -176,6 +168,16 @@ a:hover {
   }
   .columns.is-gapless:not(:last-child) {
     margin-bottom: 0;
+  }
+
+  .landing-title {
+    font-size: 130px;
+    width: 70%;
+    line-height: 1em;
+  }
+
+  .column {
+    margin-left: 30px;
   }
 }
 </style>
