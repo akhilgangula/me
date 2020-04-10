@@ -128,15 +128,18 @@ a:hover {
   }
 
   .landing-title {
-    line-height: 1.2em;
-    font-size: 130px;
+    font-size: calc(32px + (130 - 32) * ((100vw - 300px) / (1600 - 300)));
+    line-height: calc(1.2em + (1.2 - 1.2) * ((100vw - 300px) / (1600 - 300)));
+    width: 70%;
+  }
+
+  .column {
+    margin-left: 10vw;
   }
 
   .landing-caption {
     font-size: 1.5em;
   }
-
-  
 }
 
 /* 
@@ -153,7 +156,6 @@ a:hover {
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
-  
 }
 
 /* 
@@ -171,6 +173,5 @@ a:hover {
   .columns.is-gapless:not(:last-child) {
     margin-bottom: 0;
   }
-  
 }
 </style>
