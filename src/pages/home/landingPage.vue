@@ -129,12 +129,14 @@ a:hover {
 
   .landing-title {
     line-height: 1.2em;
-    font-size: 2em;
+    font-size: 130px;
   }
 
   .landing-caption {
     font-size: 1.5em;
   }
+
+  
 }
 
 /* 
@@ -169,15 +171,6 @@ a:hover {
   .columns.is-gapless:not(:last-child) {
     margin-bottom: 0;
   }
-
-  .landing-title {
-    font-size: 130px;
-    width: 70%;
-    line-height: 1em;
-  }
-
-  .column {
-    margin-left: 30px;
-  }
+  
 }
 </style>
